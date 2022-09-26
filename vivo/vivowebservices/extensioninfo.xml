@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
+--><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
+           
+    
+    <extension abstractclassprefix="Generated" classprefix="Vivowebservices" managername="VivowebservicesManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="vivowebservices" usemaven="false">
+                               
+      
+        
+        <requires-extension name="webservicescommons"/>
+                         
+       
+      
+        
+        <coremodule generated="true" manager="br.com.vivo.jalo.VivowebservicesManager" packageroot="br.com.vivo"/>
+                      
+        
+        <webmodule jspcompile="false" webroot="/vivowebservices"/>
+                					
+		
+        
+        	
+
+   
+    
+    </extension>
+              
+
+
+</extensioninfo>
