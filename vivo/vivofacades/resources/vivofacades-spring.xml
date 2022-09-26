@@ -182,4 +182,9 @@
 	</bean>
 
 	<bean id="genderData" class="br.com.vivo.facades.product.data.GenderData" scope="prototype"/>
+
+	<alias name="defaultVivoCheckoutFacade" alias="vivoCheckoutFacade"/>
+	<bean id="defaultVivoCheckoutFacade" class="br.com.vivo.facades.checkout.impl.DefaultVivoCheckoutFacade" parent="checkoutFacade">
+
+	</bean>
 </beans>
