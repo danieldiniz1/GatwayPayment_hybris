@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 5 de out de 2022 09:20:26                   ---
+ * --- Generated at 14 de out de 2022 14:17:40                  ---
  * ----------------------------------------------------------------
  */
 package br.com.vivo.core.jalo;
@@ -11,6 +11,7 @@ import br.com.vivo.core.jalo.ApparelProduct;
 import br.com.vivo.core.jalo.ApparelSizeVariantProduct;
 import br.com.vivo.core.jalo.ApparelStyleVariantProduct;
 import br.com.vivo.core.jalo.ElectronicsColorVariantProduct;
+import br.com.vivo.core.jalo.IntegrationConfiguration;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloBusinessException;
@@ -148,6 +149,32 @@ public abstract class GeneratedVivoCoreManager extends Extension
 	public ElectronicsColorVariantProduct createElectronicsColorVariantProduct(final Map attributeValues)
 	{
 		return createElectronicsColorVariantProduct( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public IntegrationConfiguration createIntegrationConfiguration(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( VivoCoreConstants.TC.INTEGRATIONCONFIGURATION );
+			return (IntegrationConfiguration)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating IntegrationConfiguration : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public IntegrationConfiguration createIntegrationConfiguration(final Map attributeValues)
+	{
+		return createIntegrationConfiguration( getSession().getSessionContext(), attributeValues );
 	}
 	
 	@Override

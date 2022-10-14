@@ -54,9 +54,17 @@ public class DefaultPagueseguropaymentService implements PagueseguropaymentServi
 		mediaService.setStreamForMedia(media, getImageStream());
 	}
 
-	@Override
-	public void getToken() {
 
+
+	@Override
+	public void createApplication() {
+
+	}
+
+	@Override
+	public String getToken() {
+
+		return null;
 	}
 
 	private final static String FIND_LOGO_QUERY = "SELECT {" + CatalogUnawareMediaModel.PK + "} FROM {"

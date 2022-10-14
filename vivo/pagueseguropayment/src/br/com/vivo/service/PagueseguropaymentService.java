@@ -9,5 +9,7 @@ public interface PagueseguropaymentService
 
 	void createLogo(String logoCode);
 
-	void getToken();
+	String getToken();
+
+	void createApplication();
 }

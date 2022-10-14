@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 5 de out de 2022 09:20:26                   ---
+ * --- Generated at 14 de out de 2022 14:17:40                  ---
  * ----------------------------------------------------------------
  */
 package br.com.vivo.core.constants;
@@ -20,6 +20,7 @@ public class GeneratedVivoCoreConstants
 		public static final String APPARELSIZEVARIANTPRODUCT = "ApparelSizeVariantProduct".intern();
 		public static final String APPARELSTYLEVARIANTPRODUCT = "ApparelStyleVariantProduct".intern();
 		public static final String ELECTRONICSCOLORVARIANTPRODUCT = "ElectronicsColorVariantProduct".intern();
+		public static final String INTEGRATIONCONFIGURATION = "IntegrationConfiguration".intern();
 		public static final String SWATCHCOLORENUM = "SwatchColorEnum".intern();
 	}
 	public static class Attributes

@@ -104,5 +104,30 @@
             </itemtype>
         </typegroup>
 
+        <typegroup name="BaseSite" >
+            <itemtype code="BaseSite" extends="BaseSite" autocreate="false" generate="false">
+            </itemtype>
+        </typegroup>
+
+        <typegroup name="IntegrationConfiguration">
+            <itemtype code="IntegrationConfiguration" autocreate="true" generate="true">
+                <deployment table="integration" typecode="15022"/>
+                <attributes>
+                    <attribute qualifier="login" type="java.lang.String">
+                        <modifiers read="true" write="true" optional="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="password" type="java.lang.String">
+                        <modifiers read="true" write="true" optional="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="baseSite" type="BaseSite">
+                        <modifiers read="true" write="true" optional="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
     </itemtypes>
 </items>
