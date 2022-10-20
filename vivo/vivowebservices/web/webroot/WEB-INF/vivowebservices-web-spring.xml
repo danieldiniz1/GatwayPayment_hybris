@@ -66,6 +66,9 @@
 	<!-- Sample validator -->
 	<alias name="defaultSampleWsDTOValidator" alias="sampleWsDTOValidator"/>
 	<bean id="defaultSampleWsDTOValidator" class="br.com.vivo.validator.SampleWsDTOValidator"/>
-	
+
+
+	<alias name="compraCartaoFormValidator" alias="CartaoFormValidator"/>
+	<bean id="compraCartaoFormValidator" class="br.com.vivo.validator.CompraCartaoFormValidator"/>
 	
 </beans>

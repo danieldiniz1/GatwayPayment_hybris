@@ -109,4 +109,6 @@
 		<property name="userConverter" ref="vivowebservicesSampleUserConverter" />
 		<property name="sampleUserService" ref="vivowebservicesSampleUserService" />
 	</bean>
+
+
 </beans>
