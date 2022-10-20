@@ -11,7 +11,13 @@ import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.servicelayer.search.FlexibleSearchQuery;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -24,6 +30,7 @@ import br.com.vivo.service.PagueseguropaymentService;
 public class DefaultPagueseguropaymentService implements PagueseguropaymentService
 {
 	private static final Logger LOG = LoggerFactory.getLogger(DefaultPagueseguropaymentService.class);
+	private static final Long TIMEOUT = 30l;
 
 	private MediaService mediaService;
 	private ModelService modelService;
@@ -57,8 +64,21 @@ public class DefaultPagueseguropaymentService implements PagueseguropaymentServi
 
 
 	@Override
-	public void createApplication() {
+	public void createApplication() throws IOException, InterruptedException {
 
+		HttpRequest request = HttpRequest.newBuilder()
+				.POST(null)
+				.uri(URI.create("https://sandbox.api.pagseguro.com/oauth2/application"))
+				.headers("accept", "application/json","content-type", "application/json")
+				.timeout(Duration.ofSeconds(TIMEOUT))
+				.build();
+
+		HttpClient httpClient = HttpClient.newBuilder()
+				.connectTimeout(Duration.ofSeconds(3l))
+				.followRedirects(HttpClient.Redirect.NORMAL)
+				.build();
+
+		HttpResponse response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 	}
 
 	@Override

@@ -3,6 +3,8 @@
  */
 package br.com.vivo.service;
 
+import java.io.IOException;
+
 public interface PagueseguropaymentService
 {
 	String getHybrisLogoUrl(String logoCode);
@@ -11,5 +13,5 @@ public interface PagueseguropaymentService
 
 	String getToken();
 
-	void createApplication();
+	void createApplication() throws IOException, InterruptedException;
 }
