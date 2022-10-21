@@ -538,4 +538,7 @@
 		<property name="itemCleanupHooks" ref="csTicketRetentionHooks"/>
 		<property name="ticketBusinessService" ref="ticketBusinessService"/>
 	</bean>
+
+	<alias name="defautlVivoPaymentService" alias="vivoPaymentService"/>
+	<bean id="defautlVivoPaymentService" class="br.com.vivo.core.service.impl.DefaultVivoPaymentService"/>
 </beans>

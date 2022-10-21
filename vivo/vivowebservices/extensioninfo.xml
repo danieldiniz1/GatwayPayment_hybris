@@ -9,10 +9,10 @@
       
         
         <requires-extension name="webservicescommons"/>
+
+        <requires-extension name="vivofacades"/>
                          
-       
-      
-        
+
         <coremodule generated="true" manager="br.com.vivo.jalo.VivowebservicesManager" packageroot="br.com.vivo"/>
                       
         

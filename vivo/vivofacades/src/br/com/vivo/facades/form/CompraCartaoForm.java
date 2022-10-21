@@ -1,4 +1,4 @@
-package br.com.vivo.controllers.form;
+package br.com.vivo.facades.form;
 
 public class CompraCartaoForm {
 
