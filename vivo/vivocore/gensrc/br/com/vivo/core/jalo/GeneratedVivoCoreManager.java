@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 21 de out de 2022 15:55:03                  ---
+ * --- Generated at 24 de out de 2022 11:45:35                  ---
  * ----------------------------------------------------------------
  */
 package br.com.vivo.core.jalo;
@@ -18,9 +18,14 @@ import de.hybris.platform.jalo.JaloBusinessException;
 import de.hybris.platform.jalo.JaloSystemException;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.extension.Extension;
+import de.hybris.platform.jalo.order.payment.PaymentInfo;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
+import de.hybris.platform.jalo.user.Customer;
+import de.hybris.platform.jalo.user.User;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,6 +38,9 @@ public abstract class GeneratedVivoCoreManager extends Extension
 	static
 	{
 		final Map<String, Map<String, AttributeMode>> ttmp = new HashMap();
+		Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
+		tmp.put("paymentsList", AttributeMode.INITIAL);
+		ttmp.put("de.hybris.platform.jalo.user.Customer", Collections.unmodifiableMap(tmp));
 		DEFAULT_INITIAL_ATTRIBUTES = ttmp;
 	}
 	@Override
@@ -181,6 +189,43 @@ public abstract class GeneratedVivoCoreManager extends Extension
 	public String getName()
 	{
 		return VivoCoreConstants.EXTENSIONNAME;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.paymentsList</code> attribute.
+	 * @return the paymentsList
+	 */
+	public List<PaymentInfo> getPaymentsList(final SessionContext ctx, final Customer item)
+	{
+		List<PaymentInfo> coll = (List<PaymentInfo>)item.getProperty( ctx, VivoCoreConstants.Attributes.Customer.PAYMENTSLIST);
+		return coll != null ? coll : Collections.EMPTY_LIST;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.paymentsList</code> attribute.
+	 * @return the paymentsList
+	 */
+	public List<PaymentInfo> getPaymentsList(final Customer item)
+	{
+		return getPaymentsList( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.paymentsList</code> attribute. 
+	 * @param value the paymentsList
+	 */
+	public void setPaymentsList(final SessionContext ctx, final Customer item, final List<PaymentInfo> value)
+	{
+		item.setProperty(ctx, VivoCoreConstants.Attributes.Customer.PAYMENTSLIST,value == null || !value.isEmpty() ? value : null );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.paymentsList</code> attribute. 
+	 * @param value the paymentsList
+	 */
+	public void setPaymentsList(final Customer item, final List<PaymentInfo> value)
+	{
+		setPaymentsList( getSession().getSessionContext(), item, value );
 	}
 	
 }

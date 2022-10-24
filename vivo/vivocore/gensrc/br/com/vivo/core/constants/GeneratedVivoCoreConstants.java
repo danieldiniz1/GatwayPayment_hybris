@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 21 de out de 2022 15:55:03                  ---
+ * --- Generated at 24 de out de 2022 11:45:35                  ---
  * ----------------------------------------------------------------
  */
 package br.com.vivo.core.constants;
@@ -25,7 +25,10 @@ public class GeneratedVivoCoreConstants
 	}
 	public static class Attributes
 	{
-		// no constants defined.
+		public static class Customer
+		{
+			public static final String PAYMENTSLIST = "paymentsList".intern();
+		}
 	}
 	public static class Enumerations
 	{

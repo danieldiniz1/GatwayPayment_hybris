@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 21 de out de 2022 15:55:03                  ---
+ * --- Generated at 24 de out de 2022 11:45:35                  ---
  * ----------------------------------------------------------------
  */
 package br.com.vivo.facades.constants;

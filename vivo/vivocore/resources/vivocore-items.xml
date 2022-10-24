@@ -8,6 +8,7 @@
         <collectiontype code="GenderList" elementtype="Gender" autocreate="true" generate="true" type="list"/>
         <collectiontype code="SwatchColorSet" elementtype="SwatchColorEnum" autocreate="true" generate="true"
                         type="set"/>
+        <collectiontype code="PaymentsInfos" elementtype="PaymentInfo" autocreate="true" type="list"/>
     </collectiontypes>
 
     <enumtypes>
@@ -129,5 +130,22 @@
             </itemtype>
         </typegroup>
 
+        <typegroup name="VivoCustomer">
+            <itemtype code="Customer" extends="Customer" autocreate="false" generate="false">
+                <attributes>
+                    <attribute qualifier="paymentsList" type="PaymentsInfos">
+                        <modifiers write="true" read="true" optional="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
+
+        <typegroup name="VivoPayment">
+            <itemtype code="PaymentInfo" extends="PaymentInfo" autocreate="false" generate="false">
+
+            </itemtype>
+        </typegroup>
     </itemtypes>
 </items>
