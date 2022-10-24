@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 24 de out de 2022 11:45:35                  ---
+ * --- Generated at 24 de out de 2022 16:06:34                  ---
  * ----------------------------------------------------------------
  */
 package org.vivobackoffice.jalo;

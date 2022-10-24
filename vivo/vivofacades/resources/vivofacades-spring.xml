@@ -186,5 +186,6 @@
 	<alias name="defaultVivoCheckoutFacade" alias="vivoCheckoutFacade"/>
 	<bean id="defaultVivoCheckoutFacade" class="br.com.vivo.facades.checkout.impl.DefaultVivoCheckoutFacade" parent="checkoutFacade">
 		<property name="vivoPaymentService" ref="vivoPaymentService"/>
+		<property name="pagueseguropaymentService" ref="pagueseguropaymentService"/>
 	</bean>
 </beans>
