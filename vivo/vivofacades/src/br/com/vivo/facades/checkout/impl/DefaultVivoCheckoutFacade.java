@@ -17,11 +17,15 @@ public class DefaultVivoCheckoutFacade extends DefaultCheckoutFacade implements 
 
     @Override
     public void sendPayment(CompraCartaoForm form) {
-        //metodo privado para salvar as infos na banco de dados criptografado
+        //metodo privado para salvar as infos no banco de dados criptografado se varia´vel de aceite for true;
+        vivoPaymentService.findCustomerById(form.getEmail());
         getVivoPaymentService();
 
+
+
         // iniciar chamada para cbrança pelo cartão de crédito
-        getPagueseguropaymentService().getToken();
+        String token = getPagueseguropaymentService().getToken();
+        getPagueseguropaymentService();
     }
 
     public VivoPaymentService getVivoPaymentService() {

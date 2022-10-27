@@ -540,5 +540,12 @@
 	</bean>
 
 	<alias name="defautlVivoPaymentService" alias="vivoPaymentService"/>
-	<bean id="defautlVivoPaymentService" class="br.com.vivo.core.service.impl.DefaultVivoPaymentService"/>
+	<bean id="defautlVivoPaymentService" class="br.com.vivo.core.service.impl.DefaultVivoPaymentService">
+		<property name="vivoCustomerDao" ref="vivoCustomerDao"/>
+	</bean>
+
+	<alias name="defaultVivoCustomerDao" alias="vivoCustomerDao"/>
+	<bean id="defaultVivoCustomerDao" class="br.com.vivo.core.dao.impl.DefaultVivoCustomerDao" parent="abstractItemDao" >
+
+	</bean>
 </beans>

@@ -16,6 +16,7 @@
         
         <requires-extension name="vivocore"/>
         <requires-extension name="pagueseguropayment"/>
+<!--        <requires-extension name="de.hybris.platform.acceleratorstorefrontcommons"/>-->
 
         
         <coremodule generated="true" manager="de.hybris.platform.jalo.extension.GenericManager" packageroot="br.com.vivo.facades"/>
