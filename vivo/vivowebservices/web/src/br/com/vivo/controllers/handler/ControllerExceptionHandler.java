@@ -11,11 +11,11 @@ import java.time.LocalDateTime;
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
-    @ExceptionHandler(RuntimeException.class) // colocar a exception criada
-    public ResponseEntity<StandardError> DataCardProblems(RuntimeException e){
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(StandardError.valueOf(
-                HttpStatus.BAD_REQUEST.value(), e.getMessage(), LocalDateTime.now()));
-    }
+//    @ExceptionHandler(RuntimeException.class) // colocar a exception criada
+//    public ResponseEntity<StandardError> DataCardProblems(RuntimeException e){
+//        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(StandardError.valueOf(
+//                HttpStatus.BAD_REQUEST.value(), e.getMessage(), LocalDateTime.now()));
+//    }
 
 //    @ExceptionHandler(ObjectNotFoundException.class)
 //    public ResponseEntity<StandardError> customerNotFound(ObjectNotFoundException e){

@@ -187,5 +187,22 @@
 	<bean id="defaultVivoCheckoutFacade" class="br.com.vivo.facades.checkout.impl.DefaultVivoCheckoutFacade" parent="checkoutFacade">
 		<property name="vivoPaymentService" ref="vivoPaymentService"/>
 		<property name="pagueseguropaymentService" ref="pagueseguropaymentService"/>
+<!--		<property name="customerPaymentConverter" ref="customerPaymentConverter"/>-->
+		<property name="customerPaymentPopulator" ref="customerPaymentPopulator"/>
 	</bean>
+
+<!--	create the converters and populators-->
+
+	<bean id="customerPaymentPopulator" class="br.com.vivo.facades.populators.CustomerPaymentPopulator">
+		<property name="modelService" ref="modelService"/>
+	</bean>
+
+<!--	<bean id="customerPaymentConverter" parent="abstractPopulatingConverter">-->
+<!--		<property name="customerModel" value="de.hybris.platform.core.model.user.CustomerModel"/>-->
+<!--		<property name="populators">-->
+<!--			<list>-->
+<!--				<ref bean="customerPaymentPopulator"/>-->
+<!--			</list>-->
+<!--		</property>-->
+<!--	</bean>-->
 </beans>

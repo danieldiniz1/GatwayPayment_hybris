@@ -8,7 +8,7 @@
         <collectiontype code="GenderList" elementtype="Gender" autocreate="true" generate="true" type="list"/>
         <collectiontype code="SwatchColorSet" elementtype="SwatchColorEnum" autocreate="true" generate="true"
                         type="set"/>
-        <collectiontype code="PaymentsInfos" elementtype="PaymentInfo" autocreate="true" type="list"/>
+        <collectiontype code="PaymentsInfos" elementtype="VivoPaymentInfo" autocreate="true" type="list"/>
     </collectiontypes>
 
     <enumtypes>
@@ -131,7 +131,7 @@
         </typegroup>
 
         <typegroup name="VivoCustomer">
-            <itemtype code="Customer" extends="Customer" autocreate="false" generate="false">
+            <itemtype code="Customer" extends="Customer" autocreate="false" generate="true">
                 <attributes>
                     <attribute qualifier="paymentsList" type="PaymentsInfos">
                         <modifiers write="true" read="true" optional="true"/>
@@ -143,8 +143,22 @@
 
 
         <typegroup name="VivoPayment">
-            <itemtype code="PaymentInfo" extends="PaymentInfo" autocreate="false" generate="false">
-
+            <itemtype code="VivoPaymentInfo"  autocreate="true" generate="true">
+                <deployment table="VivoPaymentInfo" typecode="20000"/>
+                <attributes>
+                    <attribute qualifier="creditCardNumber" type="java.lang.String">
+                        <modifiers encrypted="true" read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="creditCardCVV" type="java.lang.String">
+                        <modifiers encrypted="true" read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="creditCardDateValidate" type="java.lang.String">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
             </itemtype>
         </typegroup>
     </itemtypes>

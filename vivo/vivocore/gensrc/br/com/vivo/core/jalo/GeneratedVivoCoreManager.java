@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 27 de out de 2022 15:49:51                  ---
+ * --- Generated at 31 de out de 2022 15:41:44                  ---
  * ----------------------------------------------------------------
  */
 package br.com.vivo.core.jalo;
@@ -12,13 +12,13 @@ import br.com.vivo.core.jalo.ApparelSizeVariantProduct;
 import br.com.vivo.core.jalo.ApparelStyleVariantProduct;
 import br.com.vivo.core.jalo.ElectronicsColorVariantProduct;
 import br.com.vivo.core.jalo.IntegrationConfiguration;
+import br.com.vivo.core.jalo.VivoPaymentInfo;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloBusinessException;
 import de.hybris.platform.jalo.JaloSystemException;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.extension.Extension;
-import de.hybris.platform.jalo.order.payment.PaymentInfo;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
 import de.hybris.platform.jalo.user.Customer;
@@ -185,6 +185,32 @@ public abstract class GeneratedVivoCoreManager extends Extension
 		return createIntegrationConfiguration( getSession().getSessionContext(), attributeValues );
 	}
 	
+	public VivoPaymentInfo createVivoPaymentInfo(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( VivoCoreConstants.TC.VIVOPAYMENTINFO );
+			return (VivoPaymentInfo)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating VivoPaymentInfo : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public VivoPaymentInfo createVivoPaymentInfo(final Map attributeValues)
+	{
+		return createVivoPaymentInfo( getSession().getSessionContext(), attributeValues );
+	}
+	
 	@Override
 	public String getName()
 	{
@@ -195,9 +221,9 @@ public abstract class GeneratedVivoCoreManager extends Extension
 	 * <i>Generated method</i> - Getter of the <code>Customer.paymentsList</code> attribute.
 	 * @return the paymentsList
 	 */
-	public List<PaymentInfo> getPaymentsList(final SessionContext ctx, final Customer item)
+	public List<VivoPaymentInfo> getPaymentsList(final SessionContext ctx, final Customer item)
 	{
-		List<PaymentInfo> coll = (List<PaymentInfo>)item.getProperty( ctx, VivoCoreConstants.Attributes.Customer.PAYMENTSLIST);
+		List<VivoPaymentInfo> coll = (List<VivoPaymentInfo>)item.getProperty( ctx, VivoCoreConstants.Attributes.Customer.PAYMENTSLIST);
 		return coll != null ? coll : Collections.EMPTY_LIST;
 	}
 	
@@ -205,7 +231,7 @@ public abstract class GeneratedVivoCoreManager extends Extension
 	 * <i>Generated method</i> - Getter of the <code>Customer.paymentsList</code> attribute.
 	 * @return the paymentsList
 	 */
-	public List<PaymentInfo> getPaymentsList(final Customer item)
+	public List<VivoPaymentInfo> getPaymentsList(final Customer item)
 	{
 		return getPaymentsList( getSession().getSessionContext(), item );
 	}
@@ -214,7 +240,7 @@ public abstract class GeneratedVivoCoreManager extends Extension
 	 * <i>Generated method</i> - Setter of the <code>Customer.paymentsList</code> attribute. 
 	 * @param value the paymentsList
 	 */
-	public void setPaymentsList(final SessionContext ctx, final Customer item, final List<PaymentInfo> value)
+	public void setPaymentsList(final SessionContext ctx, final Customer item, final List<VivoPaymentInfo> value)
 	{
 		item.setProperty(ctx, VivoCoreConstants.Attributes.Customer.PAYMENTSLIST,value == null || !value.isEmpty() ? value : null );
 	}
@@ -223,7 +249,7 @@ public abstract class GeneratedVivoCoreManager extends Extension
 	 * <i>Generated method</i> - Setter of the <code>Customer.paymentsList</code> attribute. 
 	 * @param value the paymentsList
 	 */
-	public void setPaymentsList(final Customer item, final List<PaymentInfo> value)
+	public void setPaymentsList(final Customer item, final List<VivoPaymentInfo> value)
 	{
 		setPaymentsList( getSession().getSessionContext(), item, value );
 	}
